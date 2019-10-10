@@ -11,6 +11,7 @@ services:
         #        stdin_open: true
         #        tty: true
     trapd:
+        build: .
         container_name: snmp-trapd
         image: snmptrapd:latest
         volumes:
