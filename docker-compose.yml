@@ -1,15 +1,12 @@
 version: '3.7'
 
-#volumes:
-#    prom_data: {}
-
 services:
-        #    sidecar:
-        #        container_name: alpine-sidecar
-        #        image: alpine:3.10
-        #        command: /bin/sh
-        #        stdin_open: true
-        #        tty: true
+#    sidecar:
+#        container_name: alpine-sidecar
+#        image: alpine:3.10
+#        command: /bin/sh
+#        stdin_open: true
+#        tty: true
     trapd:
         build: .
         container_name: snmp-trapd
