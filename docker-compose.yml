@@ -1,0 +1,26 @@
+version: '3.7'
+
+#volumes:
+#    prom_data: {}
+
+services:
+        #    sidecar:
+        #        container_name: alpine-sidecar
+        #        image: alpine:3.10
+        #        command: /bin/sh
+        #        stdin_open: true
+        #        tty: true
+    trapd:
+        container_name: snmp-trapd
+        image: snmptrapd:latest
+        volumes:
+            - ./data/mibs:/mibs
+            - ./data/snmp:/snmp
+    walk:
+        container_name: snmp-walk
+        image: snmptrapd:latest
+        volumes:
+            - ./data/mibs:/mibs
+            - ./data/snmp:/snmp
+
+

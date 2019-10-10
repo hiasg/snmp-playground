@@ -1,0 +1,1 @@
+snmptrap -v 1 -c public trapd IF-MIB::linkDown localhost 2 0 "" IF-MIB::ifIndex i 1

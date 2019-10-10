@@ -1,0 +1,1 @@
+snmptrap -v 1 -c public trapd .1.3.6.1.6.3 "" 0 0 coldStart.0
